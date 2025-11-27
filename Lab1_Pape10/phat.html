@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Automize Footer with Smart Back to Top</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latest News From Blog</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-  
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
+    .perfect-scrollbar {
+      scrollbar-width: thin;
+      scrollbar-color: transparent transparent;
+    }
+    .perfect-scrollbar::-webkit-scrollbar { width: 5px; }
+    .perfect-scrollbar::-webkit-scrollbar-track { background: transparent; }
+    .perfect-scrollbar::-webkit-scrollbar-thumb { background: transparent; border-radius: 3px; }
+    .perfect-scrollbar:hover { scrollbar-color: #9ca3af transparent; }
+    .perfect-scrollbar:hover::-webkit-scrollbar-thumb { background: #9ca3af; }
+
     body { font-family: 'Inter', sans-serif; }
     
     /* CSS cho thanh cuộn mượt mà */
@@ -48,13 +58,160 @@
     }
   </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-white">
 
-<!-- Nội dung giả để tạo chiều cao cho trang web để test scroll -->
-<div class="h-[150vh] bg-white text-center pt-20">
-    <h2 class="text-2xl font-bold text-gray-400">Cuộn xuống dưới để xem Footer và Nút Back To Top</h2>
-    <p class="mt-4 text-gray-400">Scroll down...</p>
+<div class="max-w-7xl mx-auto px-6 py-12">
+
+  <h2 class="text-4xl font-bold text-gray-900 mb-10">LATEST NEWS FROM BLOG</h2>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+   <!-- BÊN TRÁI - CHỮ DƯỚI ẢNH XE ĐEN NHỎ GẤP 3 LẦN -->
+<div class="lg:col-span-8">
+  <a href="#" class="group block">
+    <div class="max-w-xl mx-auto">
+      <div class="overflow-hidden rounded-3xl shadow-2xl">
+        <img src="Images/black car.webp" alt="Main post"
+             class="w-full h-auto object-cover group-hover:scale-105 transition duration-700">
+      </div>
+
+      <div class="mt-4"> <!-- giảm margin từ mt-6 xuống mt-4 cho gọn -->
+        <!-- Batteries Power: nhỏ gấp 3 -->
+        <span class="text-[10px] font-medium text-gray-400 uppercase tracking-widest">Batteries Power</span>
+        
+        <!-- Tiêu đề chính: nhỏ gấp 3 -->
+        <h3 class="mt-1.5 text-lg font-bold text-gray-900 group-hover:text-red-600 transition leading-tight">
+          Growing in a Recession: Maximize Sales in the Parts Department 2
+        </h3>
+        
+        <!-- Đoạn mô tả: nhỏ gấp 3 + nhạt hơn -->
+        <p class="mt-2 text-xs text-gray-500 leading-relaxed">
+          Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis, hendrerit ullamcorper turpis vehicula nibh mauris, gravida odio in sem laoreet tempus. Nunc...
+        </p>
+      </div>
+    </div>
+  </a>
 </div>
+
+    <!-- BÊN PHẢI -->
+    <div class="lg:col-span-4 relative -ml-6 md:-ml-10 lg:-ml-16 xl:-ml-20">
+      <div class="absolute right-0 top-0 bottom-0 w-px bg-gray-200 hidden lg:block"></div>
+
+      <div class="perfect-scrollbar overflow-y-auto pr-3" style="max-height: 500px;">
+        <div class="space-y-0">
+
+          <!-- CARD 1 -->
+          <a href="#" class="group block bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-5 border border-gray-100">
+            <div class="flex gap-6">
+              <img src="Images/orrange car.webp" class="w-28 h-28 object-cover rounded-2xl flex-shrink-0">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm4 0a1 1 0 000 2h.01a1 1 0 100-2H10zm4 0a1 1 0 000 2h.01a1 1 0 100-2H14z" clip-rule="evenodd"/>
+                  </svg>
+                  12th Mar 2024
+                </div>
+                <h4 class="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition line-clamp-2 leading-tight">
+                  Growing in a Recession: Maximize Sales in the Parts Department 6
+                </h4>
+                <p class="mt-1.5 text-xs text-gray-500 line-clamp-3 leading-relaxed">
+                  Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis...
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 2 -->
+          <a href="#" class="group block bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-5 border border-gray-100">
+            <div class="flex gap-6">
+              <img src="Images/blue car.webp" class="w-28 h-28 object-cover rounded-2xl flex-shrink-0">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm4 0a1 1 0 000 2h.01a1 1 0 100-2H10zm4 0a1 1 0 000 2h.01a1 1 0 100-2H14z" clip-rule="evenodd"/>
+                  </svg>
+                  14th Feb 2024
+                </div>
+                <h4 class="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition line-clamp-2 leading-tight">
+                  Growing in a Recession: Maximize Sales in the Parts Department 12
+                </h4>
+                <p class="mt-1.5 text-xs text-gray-500 line-clamp-3 leading-relaxed">
+                  Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis...
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 3 -->
+          <a href="#" class="group block bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-5 border border-gray-100">
+            <div class="flex gap-6">
+              <img src="Images/white black stripe car.webp" class="w-28 h-28 object-cover rounded-2xl flex-shrink-0">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm4 0a1 1 0 000 2h.01a1 1 0 100-2H10zm4 0a1 1 0 000 2h.01a1 1 0 100-2H14z" clip-rule="evenodd"/>
+                  </svg>
+                  08th Feb 2024
+                </div>
+                <h4 class="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition line-clamp-2 leading-tight">
+                  Growing in a Recession: Maximize Sales in the Parts Department 9
+                </h4>
+                <p class="mt-1.5 text-xs text-gray-500 line-clamp-3 leading-relaxed">
+                  Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis...
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 4 -->
+          <a href="#" class="group block bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-5 border border-gray-100">
+            <div class="flex gap-6">
+              <img src="Images/red car.webp" class="w-28 h-28 object-cover rounded-2xl flex-shrink-0">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm4 0a1 1 0 000 2h.01a1 1 0 100-2H10zm4 0a1 1 0 000 2h.01a1 1 0 100-2H14z" clip-rule="evenodd"/>
+                  </svg>
+                  09th Jan 2024
+                </div>
+                <h4 class="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition line-clamp-2 leading-tight">
+                  Growing in a Recession: Maximize Sales in the Parts Department 8
+                </h4>
+                <p class="mt-1.5 text-xs text-gray-500 line-clamp-3 leading-relaxed">
+                  Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis...
+                </p>
+              </div>
+            </div>
+          </a>
+
+          <!-- CARD 5 -->
+          <a href="#" class="group block bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 p-5 border border-gray-100">
+            <div class="flex gap-6">
+              <img src="Images/4 black tires.webp" class="w-28 h-28 object-cover rounded-2xl flex-shrink-0">
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center gap-1.5 text-xs text-gray-400">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h.01a1 1 0 100-2H6zm4 0a1 1 0 000 2h.01a1 1 0 100-2H10zm4 0a1 1 0 000 2h.01a1 1 0 100-2H14z" clip-rule="evenodd"/>
+                  </svg>
+                  04th Jan 2024
+                </div>
+                <h4 class="mt-1.5 text-sm font-semibold text-gray-700 group-hover:text-red-600 transition line-clamp-2 leading-tight">
+                  Growing in a Recession: Maximize Sales in the Parts Department 7
+                </h4>
+                <p class="mt-1.5 text-xs text-gray-500 line-clamp-3 leading-relaxed">
+                  Duis commodo faucibus lectus, et accumsan quam egestas at. Praesent eros mi, condimentum sit amet felis quis...
+                </p>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!-- ===== FOOTER ===== -->
 <footer class="bg-[#f2f2f2] pt-16 pb-6 text-[#333]">
@@ -265,6 +422,5 @@
       
   })();
 </script>
-
 </body>
 </html>
