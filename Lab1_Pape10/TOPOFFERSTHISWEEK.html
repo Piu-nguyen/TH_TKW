@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automize - Auto Parts Store</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="../Lab1_Pape10/Styles/TiresAndWheels.css">
+</head>
+
+<body class="bg-white relative">
+
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 space-y-2"></div>
+    <div class="w-full px-4 md:px-10 pb-20">
+        <div class="mb-16">
+            <h2 class="text-center text-2xl font-black text-gray-800 uppercase mb-8 relative">
+                Top Offers This Week
+            </h2>
+
+            <div class="flex flex-col xl:flex-row gap-6">
+
+                <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/1-25.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/2-25.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Exterior</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Headlights Assembly for Ford F-150</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star text-gray-300"></i><span
+                                    class="text-gray-400 ml-1">(4)</span></div>
+                            <div class="text-red-600 font-bold text-lg">$120.00</div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <div
+                            class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-bold px-2 py-1 rounded z-20">
+                            -15%</div>
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/1-23.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/2-23.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Oils & Fluids
+                            </p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Pennzoil Platinum Full Synthetic Motor Oil</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><span
+                                    class="text-gray-400 ml-1">(8)</span></div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-600 font-bold text-lg">$16.00</span>
+                                <span class="text-gray-400 text-xs line-through">$19.00</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <div
+                            class="absolute top-3 left-3 bg-red-600 text-white text-[9px] font-bold px-2 py-1 rounded z-20">
+                            -23%</div>
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/1-20.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/2-20.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Interior</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Sport Grip Steering Wheel Carbon</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star text-gray-300"></i><span
+                                    class="text-gray-400 ml-1">(5)</span></div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-600 font-bold text-lg">$20.00</span>
+                                <span class="text-gray-400 text-xs line-through">$26.00</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/1-2.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/2-2.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Electronics</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Car USB Charger Fast Charging</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="far fa-star text-gray-300"></i><span
+                                    class="text-gray-400 ml-1">(12)</span></div>
+                            <div class="text-red-600 font-bold text-lg">$18.00</div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div
+                    class="w-full xl:w-[400px] shrink-0 border-2 border-yellow-400 rounded-xl bg-white shadow-sm hover:shadow-2xl transition-shadow duration-500 relative group overflow-hidden">
+
+                    <div class="p-6 pb-8 h-full flex flex-col">
+
+                        <div class="text-center w-full relative z-10 mb-6">
+                            <p class="text-gray-500 text-sm mb-4">Hurry to take advantage of the offer !</p>
+                            <div class="flex justify-center gap-3">
+                                <div
+                                    class="bg-yellow-400 text-black font-bold flex flex-col items-center justify-center w-[50px] h-[50px] rounded">
+                                    <span class="text-lg leading-none">440</span><span
+                                        class="text-[9px] font-normal uppercase">Days</span>
+                                </div>
+                                <div
+                                    class="bg-yellow-400 text-black font-bold flex flex-col items-center justify-center w-[50px] h-[50px] rounded">
+                                    <span class="text-lg leading-none">06</span><span
+                                        class="text-[9px] font-normal uppercase">Hours</span>
+                                </div>
+                                <div
+                                    class="bg-yellow-400 text-black font-bold flex flex-col items-center justify-center w-[50px] h-[50px] rounded">
+                                    <span class="text-lg leading-none">11</span><span
+                                        class="text-[9px] font-normal uppercase">Mins</span>
+                                </div>
+                                <div
+                                    class="bg-yellow-400 text-black font-bold flex flex-col items-center justify-center w-[50px] h-[50px] rounded">
+                                    <span class="text-lg leading-none">02</span><span
+                                        class="text-[9px] font-normal uppercase">Secs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="h-96 relative flex items-center justify-center p-1 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-2.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-1 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-2.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+
+                        <div
+                            class="w-full bg-white transition-transform duration-300 ease-in-out group-hover:-translate-y-14 relative z-10 mt-4">
+
+                            <div class="flex text-xs text-yellow-400 mb-2">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i>
+                                <span class="text-gray-400 ml-1">(4)</span>
+                            </div>
+
+                            <h3
+                                class="font-bold text-gray-900 text-base mb-3 leading-tight hover:text-red-600 cursor-pointer line-clamp-2">
+                                Dorman Steel Wheel Compatible with Select Honda Models
+                            </h3>
+
+                            <div class="flex items-center gap-3 mb-6">
+                                <span class="text-red-600 font-bold text-2xl">$90.00</span>
+                                <span class="text-gray-400 text-sm line-through">$120.00</span>
+                                <span class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">-25%</span>
+                            </div>
+
+                            <div class="w-full bg-gray-200 rounded-full h-2.5 mb-2">
+                                <div class="bg-gradient-to-r from-yellow-400 to-red-600 h-2.5 rounded-full"
+                                    style="width: 42%"></div>
+                            </div>
+
+                            <div class="text-[10px] font-bold text-gray-500 uppercase">
+                                42% Sold - Available: 7
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute bottom-0 left-0 w-full bg-white px-6 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+    <button class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">
+        Add to Cart
+    </button>
+
+    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative flex-shrink-0">
+        <i class="fas fa-sliders-h"></i>
+        <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+            <div class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                Compare
+                <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                </div>
+            </div>
+        </div>
+    </button>
+
+   
+
+    <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative flex-shrink-0">
+        <i class="far fa-eye"></i>
+        <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+            <div class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                Quick View
+                <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                </div>
+            </div>
+        </div>
+    </button>
+
+     <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+        class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative flex-shrink-0">
+        <i class="fas fa-heart"></i>
+        <div class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+            <div class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                Wishlist
+                <div class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                </div>
+            </div>
+        </div>
+    </button>
+</div>
+                </div>
+                <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <div class="absolute top-3 left-3 flex flex-col gap-1 z-20">
+                            <span
+                                class="bg-green-500 text-white text-[9px] font-bold px-2 py-1 rounded text-center">NEW</span>
+                            <span
+                                class="bg-red-600 text-white text-[9px] font-bold px-2 py-1 rounded text-center">-29%</span>
+                        </div>
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/1-22.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2022/10/2-22.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Tires & Wheels
+                            </p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Good Year Eagle Sport All-Season Tire</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><span
+                                    class="text-gray-400 ml-1">(5)</span></div>
+                            <div class="flex items-center gap-2">
+                                <span class="text-red-600 font-bold text-lg">$100.00</span>
+                                <span class="text-gray-400 text-xs line-through">$140.00</span>
+                            </div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-34.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-33.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Electronics</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Fusce ac ligula non magna mattis tempus</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><span
+                                    class="text-gray-400 ml-1">(0)</span></div>
+                            <div class="text-red-600 font-bold text-lg">$188.00</div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-24.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-23.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Audio</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Mauris tristique sapien quis ante tempor</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><span
+                                    class="text-gray-400 ml-1">(0)</span></div>
+                            <div class="text-red-600 font-bold text-lg">$19.00</div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                    <div
+                        class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-700">
+                        <button onclick="toggleHeart(this);showToast('Please log in to use the Wishlist!')"
+                            class="group/heart absolute top-3 right-3 text-gray-300 hover:text-black z-50 transition-colors">
+                            <i class="fas fa-heart"></i>
+                            <div
+                                class="absolute top-1/2 -translate-y-1/2 right-full mr-2 opacity-0 group-hover/heart:opacity-100 transition-opacity duration-300 ease-out whitespace-nowrap pointer-events-none z-50">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-bold px-2 py-1 rounded shadow-sm relative flex items-center">
+                                    Wishlist<div
+                                        class="absolute left-full top-1/2 -translate-y-1/2 border-4 border-transparent border-l-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <div class="h-48 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-35.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                            <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-34.jpg"
+                                class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                        </div>
+                        <div
+                            class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                            <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">Wheels</p>
+                            <h3
+                                class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10 hover:text-red-500">
+                                Phasellus commodo elit rutrum leo dignissim</h3>
+                            <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400"><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i
+                                    class="far fa-star"></i><i class="far fa-star"></i><span
+                                    class="text-gray-400 ml-1">(0)</span></div>
+                            <div class="text-red-600 font-bold text-lg">$133.00</div>
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                            <button
+                                class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded hover:bg-red-600 transition-colors">Add
+                                to Cart</button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="fas fa-sliders-h"></i></button>
+                            <button
+                                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative"><i
+                                    class="far fa-eye"></i></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <script src="../Lab1_Pape10/Scripts/scripts.js"></script>
+
+</body>
+
+</html>
