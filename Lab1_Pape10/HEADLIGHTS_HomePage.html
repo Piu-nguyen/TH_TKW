@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automize - Auto Parts Store</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .skewed-tab {
+            clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+    </style>
+</head>
+
+<body class="bg-white">
+    <div class="w-full px-4 md:px-10 pb-20">
+
+        <div id="HEADLIGHTS">
+
+            <div class="flex items-end justify-between mb-6">
+                <div class="flex-grow flex items-end relative">
+                    <div class="absolute bottom-0 left-0 w-full h-[2px] bg-red-600 z-0"></div>
+                    <div
+                        class="skewed-tab bg-red-600 text-white font-bold text-lg md:text-xl py-2 pl-6 pr-10 relative z-10">
+                        HEADLIGHTS
+                    </div>
+                </div>
+
+                <a href="#"
+                    class="flex items-center gap-2 text-[10px] md:text-xs text-gray-500 hover:text-red-600 font-medium ml-4 pb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-4 text-red-600">
+                        <path fill-rule="evenodd"
+                            d="M4.5 12a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Zm6 0a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                    VIEW ALL PRODUCTS
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+
+                <link rel="stylesheet"
+                    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+                <div
+                    class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-600 z-20 transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+
+                    <div class="h-64 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-2.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-2.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                        <div class="flex gap-2 mb-2">
+                            <div class="flex flex-col items-center">
+                                <div class="bg-yellow-400 px-3 py-1 font-bold text-sm rounded">440</div>
+                                <span class="text-xs text-gray-600">Days</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="bg-yellow-400 px-3 py-1 font-bold text-sm rounded">07</div>
+                                <span class="text-xs text-gray-600">Hours</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="bg-yellow-400 px-3 py-1 font-bold text-sm rounded">58</div>
+                                <span class="text-xs text-gray-600">Mins</span>
+                            </div>
+                            <div class="flex flex-col items-center">
+                                <div class="bg-yellow-400 px-3 py-1 font-bold text-sm rounded">05</div>
+                                <span class="text-xs text-gray-600">Secs</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">CAR AUDIO SYSTEMS</p>
+                        <h3 class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10">Dorman Steel Wheel Compatible with Select Honda Models</h3>
+                        <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-1">(4)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-red-600 font-bold text-lg">$90.00</div>
+                            <span class="line-through text-gray-500 text-sm">$120.00</span>
+                            <span class="text-red-600 text-xs font-bold">-25%</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                        <button
+                            class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded-full hover:bg-red-600 transition-colors">ADD
+                            TO CART</button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="fas fa-sliders-h"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Compare<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="far fa-eye"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Quick View<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-600 z-20 transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+
+                    <div class="h-64 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-20.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-4.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">AUTOMOTIVE RIMS</p>
+                        <h3 class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10">Maecenas gravida neque ac justo volutpat sollicitudin</h3>
+                        <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-1">(0)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-red-600 font-bold text-lg">$180.00</div>
+                            <span class="line-through text-gray-500 text-sm">$210.00</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                        <button
+                            class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded-full hover:bg-red-600 transition-colors">ADD
+                            TO CART</button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="fas fa-sliders-h"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Compare<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="far fa-eye"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Quick View<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-600 z-20 transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+
+                    <div class="h-64 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-32.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-31.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">CAR AUDIO SYSTEMS</p>
+                        <h3 class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10">Quisque metus non nunc dapibus lobortis quis ligula</h3>
+                        <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-1">(0)</span>
+                        </div>
+                        <div class="text-red-600 font-bold text-lg">$19.00</div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                        <button
+                            class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded-full hover:bg-red-600 transition-colors">ADD
+                            TO CART</button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="fas fa-sliders-h"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Compare<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="far fa-eye"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Quick View<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-600 z-20 transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+
+                    <div class="h-64 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-30.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-27.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">AUTOMOTIVE RIMS</p>
+                        <h3 class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10">Suspendisse vitae orci iaculis lobortis purus molestie</h3>
+                        <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-1">(0)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="text-red-600 font-bold text-lg">$25.00</div>
+                            <span class="line-through text-gray-500 text-sm">$29.00</span>
+                            <span class="text-red-600 text-xs font-bold">-14%</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                        <button
+                            class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded-full hover:bg-red-600 transition-colors">ADD
+                            TO CART</button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="fas fa-sliders-h"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Compare<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="far fa-eye"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Quick View<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <div
+                    class="group relative bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <button class="absolute top-3 right-3 text-gray-300 hover:text-red-600 z-20 transition-colors">
+                        <i class="far fa-heart text-xl"></i>
+                    </button>
+
+                    <div class="h-64 relative flex items-center justify-center p-4 bg-white z-10 overflow-hidden">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/2-26.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-100 group-hover:opacity-0">
+                        <img src="https://automize.risingbamboo.com/wp-content/uploads/2021/08/1-2.jpg"
+                            class="absolute inset-0 w-full h-full object-contain p-4 transition-opacity duration-500 opacity-0 group-hover:opacity-100">
+                    </div>
+
+                    <div
+                        class="p-5 bg-white relative z-10 transition-transform duration-300 ease-in-out group-hover:-translate-y-14">
+                        <p class="text-gray-400 text-[10px] font-bold uppercase tracking-wide mb-1">CAR AUDIO SYSTEMS</p>
+                        <h3 class="font-bold text-gray-900 text-sm mb-2 line-clamp-2 leading-relaxed h-10">Aliquam consequat velit ac turpis sagittis tincidunt</h3>
+                        <div class="flex items-center gap-1 mb-2 text-xs text-yellow-400">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                            <span class="text-gray-400 ml-1">(0)</span>
+                        </div>
+                        <div class="text-red-600 font-bold text-lg">$33.00</div>
+                    </div>
+
+                    <div
+                        class="absolute bottom-0 left-0 w-full bg-white px-4 py-4 border-t border-gray-100 flex items-center gap-2 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-20">
+                        <button
+                            class="flex-grow bg-black text-white text-[10px] font-bold uppercase py-3 rounded-full hover:bg-red-600 transition-colors">ADD
+                            TO CART</button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="fas fa-sliders-h"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Compare<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <button
+                            class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-red-600 hover:text-white transition-colors group/btn relative">
+                            <i class="far fa-eye"></i>
+                            <div
+                                class="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/btn:opacity-100 group-hover/btn:visible transition-all duration-300 ease-out whitespace-nowrap pointer-events-none">
+                                <div
+                                    class="bg-red-600 text-white text-[11px] font-medium py-1 px-2 rounded relative shadow-lg">
+                                    Quick View<div
+                                        class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-red-600">
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+       <div class="mt-10">
+    <div class="bg-gray-100 rounded-xl p-8 h-[500px] relative overflow-hidden flex flex-col justify-center group">
+        
+        <div class="relative z-10 w-1/2">
+            <!-- Subtitle -->
+            <h5 class="text-red-600 font-bold text-sm tracking-widest mb-4">
+                AUTO PAINTING SERVICES
+            </h5>
+
+            <!-- Title -->
+           <h1 class="text-5xl font-medium text-gray-900 uppercase leading-tight mb-8">
+    AUTO BODY PAINT<br>
+    REPAIR SERVICES
+</h1>
+
+
+            <!-- Button -->
+            <a href="#"
+               class="inline-block bg-black text-white text-sm font-bold py-4 px-10 rounded-full uppercase hover:bg-red-600 transition-colors">
+                SHOP NOW
+            </a>
+        </div>
+
+        <img src="https://automize.risingbamboo.com/wp-content/uploads/2024/07/bn8-1.jpg"
+             alt="Auto Painter"
+             class="absolute right-0 bottom-0 h-full w-auto object-contain group-hover:scale-105 transition-transform duration-500">
+    </div>
+</div>
+
+
+    </div>
+
+
+</body>
+
+</html>
