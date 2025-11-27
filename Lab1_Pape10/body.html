@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service - Big Image Fixed Cards</title>
+    <!-- Nhúng Tailwind CSS v4 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+     <style type="text/tailwindcss">
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f3f4f6;
+        }
+        
+        /* Hiệu ứng bản đồ nền */
+        .bg-map-pattern {
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/8/80/World_map_-_low_resolution.svg');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 50%;
+            background-blend-mode: overlay;
+        }
+
+        /* Định nghĩa lại chuyển động: CHỈ NGANG (Horizontal) */
+        @keyframes shake-horizontal {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-8px); } /* Sang trái */
+            50% { transform: translateX(8px); }  /* Sang phải */
+            75% { transform: translateX(-8px); } /* Sang trái */
+            100% { transform: translateX(0); }
+        }
+
+        /* Áp dụng animation khi hover vào ảnh */
+        .hover-shake-x:hover {
+            animation: shake-horizontal 0.6s ease-in-out infinite;
+            cursor: pointer;
+        }
+         @theme {
+            --color-primary: #da0a0a;
+            --color-bg-box: #f5f5f5;
+            --font-poppins: 'Poppins', sans-serif;
+        }
+        
+        body { font-family: var(--font-poppins); }
+        
+        /* Cursor styles for dragging */
+        .cursor-grab { cursor: grab; }
+        .cursor-grabbing { cursor: grabbing; }
+
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- PHẦN 1: LOCATIONS -->
+    <section class="relative py-16 lg:py-24 bg-gray-100 overflow-hidden bg-map-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Cột trái: Thông tin -->
+                <div class="z-10">
+                    <h3 class="text-red-600 font-bold text-sm uppercase tracking-widest mb-2">Our Locations</h3>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-10">
+                        Car Washing and Care Points
+                    </h2>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-solid fa-location-dot text-red-600 text-xl"></i></div>
+                            <div>
+                                <h4 class="text-red-600 font-bold text-lg hover:text-red-800 transition-colors cursor-pointer">Miami Garage</h4>
+                                <p class="text-gray-500 text-sm mt-1">15 West 21th Street, Miami FL, USA</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-solid fa-location-dot text-red-600 text-xl"></i></div>
+                            <div>
+                                <h4 class="text-red-600 font-bold text-lg hover:text-red-800 transition-colors cursor-pointer">Chicago Garage</h4>
+                                <p class="text-gray-500 text-sm mt-1">5400 N. Lakewood Ave, Chicago, IL 60640</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1"><i class="fa-solid fa-location-dot text-red-600 text-xl"></i></div>
+                            <div>
+                                <h4 class="text-red-600 font-bold text-lg hover:text-red-800 transition-colors cursor-pointer">Seattle Garage</h4>
+                                <p class="text-gray-500 text-sm mt-1">312 S Washington St Seattle WA 98104-2616</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cột phải: Ảnh xe -->
+                <div class="relative z-10 flex justify-center lg:justify-end">
+                    <!-- ĐÃ SỬA: Thay đổi max-w-lg thành max-w-4xl để ảnh to hơn -->
+                    <img src="center.jpg" 
+                         alt="Yellow Car Mechanic" 
+                         class="w-full max-w-4xl object-contain drop-shadow-xl hover-shake-x"
+                         style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PHẦN 2: SERVICES CARDS -->
+    <section class="pb-24 bg-gray-100 px-4">
+        <div class="max-w-[1400px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                
+                <!-- Card 1: Detailing -->
+                <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-gray-100">
+                    <h3 class="text-gray-800 font-bold text-lg mb-6 transition-colors duration-300 hover:text-red-600 cursor-pointer">
+                        Detailling Service
+                    </h3>
+                    
+                    <div class="h-24 mb-6 flex items-center justify-center w-full">
+                        <img src="xe1.webp" 
+                             alt="Detailing" 
+                             class="h-20 w-auto object-contain hover-shake-x transition-all duration-300">
+                    </div>
+
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar vel libero vitae aliquam. Ut congue interdum molestie.
+                    </p>
+                    
+                    <button class="mt-auto bg-gray-200 text-gray-800 text-xs font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-red-600 hover:text-white uppercase tracking-wide">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Card 2: Maintenance -->
+                <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-gray-100">
+                    <h3 class="text-gray-800 font-bold text-lg mb-6 transition-colors duration-300 hover:text-red-600 cursor-pointer">
+                        Maintenance Services
+                    </h3>
+                    <div class="h-24 mb-6 flex items-center justify-center w-full">
+                        <img src="xe2.webp" 
+                             alt="Maintenance" 
+                             class="h-20 w-auto object-contain hover-shake-x transition-all duration-300">
+                    </div>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar vel libero vitae aliquam. Ut congue interdum molestie.
+                    </p>
+                    <button class="mt-auto bg-gray-200 text-gray-800 text-xs font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-red-600 hover:text-white uppercase tracking-wide">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Card 3: Battery -->
+                <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-gray-100">
+                    <h3 class="text-gray-800 font-bold text-lg mb-6 transition-colors duration-300 hover:text-red-600 cursor-pointer">
+                        Replace Battery
+                    </h3>
+                    <div class="h-24 mb-6 flex items-center justify-center w-full">
+                        <img src="xe3.svg" 
+                             alt="Battery" 
+                             class="h-20 w-auto object-contain hover-shake-x transition-all duration-300">
+                    </div>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar vel libero vitae aliquam. Ut congue interdum molestie.
+                    </p>
+                    <button class="mt-auto bg-gray-200 text-gray-800 text-xs font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-red-600 hover:text-white uppercase tracking-wide">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Card 4: Washing -->
+                <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-gray-100">
+                    <h3 class="text-gray-800 font-bold text-lg mb-6 transition-colors duration-300 hover:text-red-600 cursor-pointer">
+                        Washing & Clean
+                    </h3>
+                    <div class="h-24 mb-6 flex items-center justify-center w-full">
+                        <img src="xe4.webp" 
+                             alt="Washing" 
+                             class="h-20 w-auto object-contain hover-shake-x transition-all duration-300">
+                    </div>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar vel libero vitae aliquam. Ut congue interdum molestie.
+                    </p>
+                    <button class="mt-auto bg-gray-200 text-gray-800 text-xs font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-red-600 hover:text-white uppercase tracking-wide">
+                        Learn More
+                    </button>
+                </div>
+
+                <!-- Card 5: Insulation -->
+                <div class="bg-white rounded-2xl p-8 flex flex-col items-center text-center shadow-lg border border-gray-100">
+                    <h3 class="text-gray-800 font-bold text-lg mb-6 transition-colors duration-300 hover:text-red-600 cursor-pointer">
+                        Insulation Film Stickers
+                    </h3>
+                    <div class="h-24 mb-6 flex items-center justify-center w-full">
+                        <img src="xe5.webp" 
+                             alt="Insulation" 
+                             class="h-20 w-auto object-contain hover-shake-x transition-all duration-300">
+                    </div>
+                    <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras pulvinar vel libero vitae aliquam. Ut congue interdum molestie.
+                    </p>
+                    <button class="mt-auto bg-gray-200 text-gray-800 text-xs font-bold py-3 px-8 rounded-full transition-all duration-300 hover:bg-red-600 hover:text-white uppercase tracking-wide">
+                        Learn More
+                    </button>
+                    
+                    <!-- Nút mũi tên lên -->
+                    <div class="fixed bottom-8 right-8 z-50">
+                        <button class="bg-white border border-red-500 text-red-500 w-10 h-10 rounded-full flex items-center justify-center hover:bg-red-600 hover:text-white transition shadow-md cursor-pointer">
+                            <i class="fa-solid fa-arrow-up"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+     <div class="max-w-[1400px] mx-auto">
+        <section class="mt-[20px] mb-[60px] relative group/slider">
+            
+            <h2 class="text-center text-[28px] font-[800] uppercase text-[#222] mb-[60px] tracking-wide">
+                Testimonials
+            </h2>
+
+            <!-- KHUNG HIỂN THỊ (VIEWPORT) -->
+            <div class="overflow-hidden relative w-full px-[20px]"> 
+                <div class="mx-[-20px]">
+                    <!-- TRACK: Chứa các item -->
+                    <div id="slider-track" class="flex w-full cursor-grab touch-pan-y items-stretch">
+                        <!-- JS sẽ render item vào đây -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOTS (Dấu chấm tròn bên dưới) -->
+            <div class="flex justify-center items-center gap-[10px] mt-[50px]" id="dots-container"></div>
+        </section>
+    </div>
+<script>
+        // 1. DỮ LIỆU GỐC (Đã cập nhật text dài đầy đủ theo ảnh)
+        const originalPeople = [
+            { 
+                name: "Jennifer", 
+                loc: "California", 
+                img: "nguoi1.webp", 
+                text: "Autimize rice crackers are a pantry staple for me. They offer a healthier alternative to traditional crackers and chips while still satisfying my craving for something spicy and crunchy. The chili garlic flavor is my personal favorite—it's absolutely delicious!" 
+            },
+            { 
+                name: "Jessica", 
+                loc: "Chicago", 
+                img: "nguoi2.webp", 
+                text: "As a vegetarian, I’ve always missed out on the classic breakfast staple of omelettes. But with Automize Store’s Veg Omelette premix, I can finally enjoy a tasty and protein-packed breakfast option. The mix is simple to use and customize with my favorite veggies." 
+            },
+            { 
+                name: "Christopher", 
+                loc: "New Orleans", 
+                img: "nguoi3.webp", 
+                text: "I've been using Automize's personal care products for some time now, and I must say, I’m impressed. The quality is outstanding, and the natural ingredients make me feel confident about what I’m putting on my skin. Highly recommend!" 
+            },
+            { 
+                name: "Daniel", 
+                loc: "Seattle", 
+                img: "nguoi4.webp", 
+                text: "I’m thoroughly impressed with Automize’s wheat pasta range. I appreciate that it’s made from high-quality wheat, which is both nutritious and tasty. Plus, the variety of shapes to choose from keeps things exciting in the kitchen." 
+            },
+           
+        ];
+
+        // 2. BIẾN TOÀN CỤC
+        const track = document.getElementById('slider-track');
+        const dotsContainer = document.getElementById('dots-container');
+
+        // Cấu hình Loop
+        const itemsPerView = window.innerWidth < 768 ? 1 : 2; 
+        const cloneCount = 2; 
+        
+        let renderList = [
+            ...originalPeople.slice(-cloneCount), 
+            ...originalPeople, 
+            ...originalPeople.slice(0, cloneCount)
+        ];
+
+        let currentIndex = cloneCount; 
+        let isTransitioning = false;
+        let slideWidth = itemsPerView === 1 ? 100 : 50; 
+
+        // 3. KHỞI TẠO
+        function initSlider() {
+            track.innerHTML = '';
+            renderList.forEach(person => {
+                const div = document.createElement('div');
+                div.className = `w-full md:w-1/2 shrink-0 px-[20px] box-border select-none`;
+                
+                // Đã xóa class 'line-clamp-3' và 'min-h-[80px]' để text hiện full
+                div.innerHTML = `
+                    <div class="flex items-start gap-[25px] h-full">
+                        <div class="shrink-0 relative mt-[10px]">
+                            <div class="w-[80px] h-[80px] rounded-full overflow-hidden shadow-md bg-gray-200">
+                                <img src="${person.img}" class="w-full h-full object-cover pointer-events-none" onerror="this.src='https://via.placeholder.com/150'">
+                            </div>
+                            <div class="absolute top-[10px] -left-[10px] w-[26px] h-[26px] bg-white rounded-full flex items-center justify-center shadow-md text-[#333] text-[12px] border border-[#eee]">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                        </div>
+                        <div class="bg-bg-box p-[35px] rounded-[6px] relative flex-grow group hover:shadow-lg transition-all duration-300 h-full flex flex-col">
+                            <div class="absolute top-[35px] -left-[8px] w-[20px] h-[20px] bg-bg-box rotate-45"></div>
+                            <div class="text-[12px] text-yellow-400 mb-[12px] gap-1 flex">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <h3 class="text-[16px] font-[700] text-[#222] mb-[15px]">Great Price & Services</h3>
+                            
+                            <!-- PHẦN TEXT ĐÃ ĐƯỢC SỬA: Hiện full nội dung -->
+                            <p class="text-[14px] text-[#666] leading-[1.6] mb-[20px] flex-grow">
+                                ${person.text}
+                            </p>
+                            
+                            <div class="text-[13px] mt-auto pt-[10px]">
+                                <span class="font-[700] text-[#222]">${person.name}</span> 
+                                <span class="text-[#888] font-medium"> - From ${person.loc}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                track.appendChild(div);
+            });
+
+            renderDots();
+            updatePosition(false); 
+        }
+
+        // 4. CHUYỂN SLIDE
+        function moveToSlide(index, transition = true) {
+            isTransitioning = true;
+            track.style.transition = transition ? 'transform 0.5s ease-out' : 'none';
+            track.style.transform = `translateX(-${index * slideWidth}%)`;
+            currentIndex = index;
+
+            let realIndex = index - cloneCount;
+            if (realIndex < 0) realIndex = originalPeople.length + realIndex;
+            if (realIndex >= originalPeople.length) realIndex = realIndex - originalPeople.length;
+            updateDots(realIndex);
+        }
+
+        // 5. XỬ LÝ LOOP VÔ TẬN
+        track.addEventListener('transitionend', () => {
+            isTransitioning = false;
+            if (currentIndex >= renderList.length - cloneCount) {
+                moveToSlide(currentIndex - originalPeople.length, false);
+            }
+            if (currentIndex < cloneCount) {
+                moveToSlide(currentIndex + originalPeople.length, false);
+            }
+        });
+
+        // 6. DOTS
+        function renderDots() {
+            dotsContainer.innerHTML = '';
+            originalPeople.forEach((_, idx) => {
+                const btn = document.createElement('button');
+                btn.className = `w-[8px] h-[8px] bg-[#ccc] rounded-full transition-all duration-300`;
+                btn.onclick = () => {
+                    moveToSlide(cloneCount + idx);
+                };
+                dotsContainer.appendChild(btn);
+            });
+        }
+
+        function updateDots(activeIdx) {
+            const dots = dotsContainer.children;
+            for (let i = 0; i < dots.length; i++) {
+                if (i === activeIdx) {
+                    dots[i].className = "w-[18px] h-[18px] rounded-full border border-primary flex items-center justify-center bg-transparent";
+                    dots[i].innerHTML = '<span class="w-[6px] h-[6px] bg-primary rounded-full"></span>';
+                } else {
+                    dots[i].className = "w-[8px] h-[8px] bg-[#ccc] rounded-full hover:bg-primary cursor-pointer";
+                    dots[i].innerHTML = '';
+                }
+            }
+        }
+
+        function updatePosition(anim) {
+            moveToSlide(currentIndex, anim);
+        }
+
+        // 7. KÉO THẢ / VUỐT (DRAG & SWIPE)
+        let isDragging = false;
+        let startPos = 0;
+        let prevTranslate = 0;
+
+        track.addEventListener('mousedown', touchStart);
+        track.addEventListener('touchstart', touchStart);
+
+        track.addEventListener('mouseup', touchEnd);
+        track.addEventListener('mouseleave', () => { if(isDragging) touchEnd() });
+        track.addEventListener('touchend', touchEnd);
+
+        track.addEventListener('mousemove', touchMove);
+        track.addEventListener('touchmove', touchMove);
+
+        function touchStart(event) {
+            isDragging = true;
+            startPos = getPositionX(event);
+            track.classList.add('cursor-grabbing');
+            track.classList.remove('cursor-grab');
+            prevTranslate = -currentIndex * slideWidth;
+        }
+
+        function touchMove(event) {
+            if (isDragging) {
+                const currentPosition = getPositionX(event);
+                const currentDiff = currentPosition - startPos;
+                const trackWidth = track.parentElement.offsetWidth;
+                const diffPercent = (currentDiff / trackWidth) * 100;
+                
+                track.style.transition = 'none';
+                track.style.transform = `translateX(${prevTranslate + diffPercent}%)`;
+            }
+        }
+
+        function touchEnd() {
+            isDragging = false;
+            track.classList.remove('cursor-grabbing');
+            track.classList.add('cursor-grab');
+            
+            // Tính toán vị trí hiện tại
+            const matrix = new WebKitCSSMatrix(window.getComputedStyle(track).transform);
+            const currentX = matrix.m41; 
+            const trackWidth = track.parentElement.offsetWidth;
+            const targetX = -(currentIndex * slideWidth / 100) * trackWidth;
+            
+            // Ngưỡng kéo để chuyển slide (50px)
+            if (currentX < targetX - 50) {
+                moveToSlide(currentIndex + 1);
+            } else if (currentX > targetX + 50) {
+                moveToSlide(currentIndex - 1);
+            } else {
+                moveToSlide(currentIndex);
+            }
+        }
+
+        function getPositionX(event) {
+            return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+        }
+
+        // INIT
+        document.addEventListener('DOMContentLoaded', initSlider);
+        window.addEventListener('resize', () => {
+            const newItemsPerView = window.innerWidth < 768 ? 1 : 2;
+            if (newItemsPerView !== (slideWidth === 100 ? 1 : 2)) {
+                 slideWidth = newItemsPerView === 1 ? 100 : 50;
+                 initSlider(); 
+            }
+        });
+
+    </script>
+</body>
+</html>
