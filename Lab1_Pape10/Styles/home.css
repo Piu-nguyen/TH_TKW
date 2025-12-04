@@ -1,0 +1,73 @@
+body { font-family: 'Inter', sans-serif; }
+    
+    /* CSS cho thanh cuộn mượt mà */
+    html { scroll-behavior: smooth; }
+
+    /* CSS riêng cho nút Back to Top */
+    .progress-wrap {
+      position: fixed;
+      right: 30px;
+      bottom: 30px;
+      height: 46px;
+      width: 46px;
+      cursor: pointer;
+      display: block;
+      border-radius: 50px;
+      box-shadow: inset 0 0 0 2px rgba(0,0,0,0.1);
+      z-index: 10000;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(15px);
+      transition: all 200ms linear;
+      background-color: white; 
+    }
+    
+    /* Khi active (đã scroll) thì hiện nút lên */
+    .progress-wrap.active-progress {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* SVG vòng tròn tiến trình */
+    .progress-circle path {
+      fill: none;
+      stroke: #ef4444; /* Màu đỏ (red-500) */
+      stroke-width: 4;
+      box-sizing: border-box;
+      transition: stroke-dashoffset 10ms linear;
+    }
+/* 1. Hiệu ứng xe tải chạy */
+@keyframes truck-run {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+}
+
+/* 2. Hiệu ứng điện thoại rung */
+@keyframes phone-ring {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(15deg); }
+    100% { transform: rotate(0deg); }
+}
+
+/* Tạo class tiện ích để gọi animation */
+.hover-truck:hover i {
+    animation: truck-run 1s infinite ease-in-out;
+}
+.hover-map:hover i {
+    animation: bounce 1s infinite; /* Tailwind có sẵn animate-bounce */
+}
+.hover-phone:hover i {
+    animation: phone-ring 0.5s infinite;
+}
+/* 1. Icon chạy sang phải (giống xe tải) */
+.group:hover .anim-run {
+    animation: truck-run 1s infinite ease-in-out;
+}
+
+/* 2. Icon rung lắc (giống điện thoại) */
+.group:hover .anim-ring {
+    animation: phone-ring 0.5s infinite;
+}
